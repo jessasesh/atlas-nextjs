@@ -122,9 +122,6 @@ async function seedAnswers() {
 }
 
 async function clearData() {
-  await client.sql`DELETE FROM questions`;
-  await client.sql`DELETE FROM topics`;
-  await client.sql`DELETE FROM users`;
   await client.sql`DROP TABLE IF EXISTS questions`;
   await client.sql`DROP TABLE IF EXISTS topics`;
   await client.sql`DROP TABLE IF EXISTS users`;
